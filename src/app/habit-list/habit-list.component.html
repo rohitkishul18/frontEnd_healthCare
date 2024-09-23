@@ -1,0 +1,27 @@
+<div class="habit-list-container">
+  <h2>Your Habits</h2>
+  <table class="habit-table">
+    <thead>
+      <tr>
+        <th>create habit</th>
+        <th>delete habit</th>
+        <th>Edit habit</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let habit of habits">
+        <td><a routerLink="/habits/create" class="create-btn">Create New Habit</a></td>
+        <td>
+          <button class="delete-btn" (click)="onDelete(habit._id)">Delete</button>
+        </td>
+        <td>
+          <button class="edit-btn" (click)="editHabit(habit._id)">Edit</button>
+        </td>
+        <td>{{ habit.name }}</td>
+        <td>{{ habit.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

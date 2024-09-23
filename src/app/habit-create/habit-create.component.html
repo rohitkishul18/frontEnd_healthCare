@@ -1,0 +1,16 @@
+<div class="habit-container">
+    <h2>Create New Habit</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="habitName">Habit Name</label>
+        <input type="text" id="habitName" [(ngModel)]="habitName" name="habitName" required />
+      </div>
+      <div class="form-group">
+        <label for="habitDescription">Habit Description</label>
+        <input type="text" id="habitDescription" [(ngModel)]="habitDescription" name="habitDescription" />
+      </div>
+      <button type="submit" class="btn">Create Habit</button>
+      <div type="submit" class="btn-back" routerLink="/habits">back</div>
+    </form>
+  </div>
+  
