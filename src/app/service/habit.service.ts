@@ -16,7 +16,7 @@ export class HabitService {
   }
 
   getHabitsByUser(userId: string): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/${userId}`);
+    return this.http.get<any[]>(`${this.apiUrl}/for-user/${userId}`);
   }
 
   deleteHabit(habitId: string): Observable<any> {

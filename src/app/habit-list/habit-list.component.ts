@@ -19,7 +19,7 @@ export class HabitListComponent implements OnInit {
     if (storeDetail) {
       try {
         const userDetails = JSON.parse(storeDetail);  // Parse the stored user data
-        const userId = userDetails._id;  // Extract userId from the parsed data
+        const userId = userDetails.userId; // Extract userId from the parsed data
   
         // Fetch habits for the user
         this.habitService.getHabitsByUser(userId).subscribe(
